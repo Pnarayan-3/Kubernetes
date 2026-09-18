@@ -1,0 +1,82 @@
+# Kubernetes local files
+
+.kube/
+.kube-cache/
+
+# Minikube
+
+.minikube/
+minikube/
+
+# Kind
+
+.kind/
+
+# K3d
+
+.k3d/
+
+# Kubernetes generated files
+
+*.kubeconfig
+*.kubeconfig.yaml
+
+# Secrets and environment files
+
+.env
+.env.*
+!.env.example
+
+# Local credentials and certificates
+
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+
+# Temporary files
+
+*.tmp
+*.temp
+*.log
+
+# OS files
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE files
+
+.vscode/
+.idea/
+
+# VS Code workspace files
+
+*.code-workspace
+
+# Backup files
+
+*.bak
+*.backup
+*~
+
+# Terraform files (if used later)
+
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Helm generated files
+
+helm-chart-*.tgz
+
+# General build/output directories
+
+bin/
+obj/
+dist/
+build/
+target/
