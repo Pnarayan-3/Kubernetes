@@ -2,7 +2,7 @@
 
 This repository contains my **daily Kubernetes learning, practice, notes, commands, and hands-on experiments**.
 
-I am using this repository to document my Kubernetes journey step by step, from the fundamentals to more advanced concepts.
+I am using this repository to document my Kubernetes journey step by step, from the fundamentals to more advanced  concepts.
 
 ---
 
