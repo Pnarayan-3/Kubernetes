@@ -1,0 +1,7 @@
+kind: ReplicaSet
+metadata: 
+  name: nginx-replicasets
+
+template: 
+  metadata:
+    name: nginx-rep-pod

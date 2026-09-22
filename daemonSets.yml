@@ -1,0 +1,9 @@
+kind: DaemonSet
+metadata: 
+  name: nginx-daemonsets
+spec:
+  template:
+    metadata:
+      name: nginx-dmn-pod
+      labels:
+        app: nginx
