@@ -1,0 +1,19 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata: 
+  name: local-pvc
+  namespace: nginx
+  volumeMounts:
+    - mountPath: /var/www/html
+      name: my-volume
+  volumes:
+    - name: my-volume
+      persistentVolumeClaim:
+        claimName: local-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: local-storage
