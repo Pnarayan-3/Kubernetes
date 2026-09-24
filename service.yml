@@ -3,7 +3,8 @@ apiVersion: v1
 metadata: 
   name: nginx-service
   namespace: nginx
-spec: 
+spec:
+  clusterIP: None
   selector:
     app: nginx
   ports: 
