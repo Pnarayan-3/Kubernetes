@@ -23,3 +23,5 @@ kubectl get pvc
 # port forwarding
 kubectl port-forward service/nginx-service -n nginx 80:80 --address=0.0.0.0
 
+# some commands related to statefulsets
+kubectl exec -it mysql-statefulset -o -n mysql --bash
