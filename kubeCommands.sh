@@ -20,8 +20,9 @@ kubectl delete -f cronjob.yml
 kubectl get pv
 kubectl get pvc
 
-# port forwarding
+# port forwarding and scaling
 kubectl port-forward service/nginx-service -n nginx 80:80 --address=0.0.0.0
+kubectl scale deployment apache-deployment -n apache --replicas=3
 
 # some commands related to statefulsets
 kubectl exec -it mysql-statefulset -o -n mysql --bash
@@ -37,3 +38,6 @@ spec:
       operator: "Equal"
       value: "true"
       effect: "NoSchedule"
+
+# some commands related to hpa,vpa,keda
+kubectl top node # it will show metrics
