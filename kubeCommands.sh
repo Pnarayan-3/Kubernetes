@@ -41,3 +41,5 @@ spec:
 
 # some commands related to hpa,vpa,keda
 kubectl top node # it will show metrics
+kubectl run -it load-generator --image=busybox -n apache --bash
+kubectl run -i --tty load-generator --image=busybox -n apache ./bin/sh
