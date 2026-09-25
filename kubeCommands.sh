@@ -25,3 +25,15 @@ kubectl port-forward service/nginx-service -n nginx 80:80 --address=0.0.0.0
 
 # some commands related to statefulsets
 kubectl exec -it mysql-statefulset -o -n mysql --bash
+
+# some commands related to taints and toleration
+kubectl taint nodes <node> key=value:effect  # exaample- kubectl taint nodes node1 environment=production:NoSchedule
+kubectl taint nodes node1 environment=production:NoSchedule-   # command to removing a taint (-) means removing.
+
+# toleration example
+spec:
+  tolerations:
+    - key: "gpu"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"
