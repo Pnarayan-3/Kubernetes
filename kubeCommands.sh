@@ -28,7 +28,7 @@ kubectl scale deployment apache-deployment -n apache --replicas=3
 kubectl exec -it mysql-statefulset -o -n mysql --bash
 
 # some commands related to taints and toleration
-kubectl taint nodes <node> key=value:effect  # exaample- kubectl taint nodes node1 environment=production:NoSchedule
+kubectl taint nodes <node> key=value:effect  # example- kubectl taint nodes node1 environment=production:NoSchedule
 kubectl taint nodes node1 environment=production:NoSchedule-   # command to removing a taint (-) means removing.
 
 # toleration example
@@ -39,7 +39,11 @@ spec:
       value: "true"
       effect: "NoSchedule"
 
-# some commands related to hpa,vpa,keda
+# some commands related to hpa,keda
 kubectl top node # it will show metrics
 kubectl run -it load-generator --image=busybox -n apache --bash
 kubectl run -i --tty load-generator --image=busybox -n apache ./bin/sh
+
+# some commands related to vpa
+kubectl get hpa -n apache
+kubectl run -i --tty load-generator --image=busybox -n apache /bin/sh
