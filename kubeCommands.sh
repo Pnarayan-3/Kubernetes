@@ -56,3 +56,8 @@ kubectl auth can-i get deployment -n apache
 kubectl auth can-i get delete deployment -n apache
 kubectl auth can-i get pods --as=apache-user -n apache
 kubectl auth can-i get deployments --as=apache-user -n apache
+
+# some commands related to kubernetes dashboard -monitoring
+kubectl -n kubernetes-dashboard create token admin-user # Create an authentication token for the Kubernetes ServiceAccount named admin-user in the kubernetes-dashboard namespace.
+kubectl proxy --address=0.0.0.0 # This starts a local proxy server that forwards requests to the Kubernetes API server.
+kubectl proxy --port=8001 --address=0.0.0.0 --accept-hosts='*' # This is useful in some remote-access/lab setups where you're accessing the proxy through a hostname or IP other than localhost.
