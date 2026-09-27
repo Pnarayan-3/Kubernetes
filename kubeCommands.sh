@@ -15,6 +15,7 @@ kubectl get cronjob -n nginx
 kubectl get pods -n nginx
 kubectl logs pod -n nginx
 kubectl delete -f cronjob.yml
+kubectl delete -f .  # this command will delete all the resources.
 
 # some commands related with persistent volumes and persistent volume claims
 kubectl get pv
@@ -47,3 +48,11 @@ kubectl run -i --tty load-generator --image=busybox -n apache ./bin/sh
 # some commands related to vpa
 kubectl get hpa -n apache
 kubectl run -i --tty load-generator --image=busybox -n apache /bin/sh
+
+# some commands related to rbac
+kubectl auth whoami  # tells you which Kubernetes identity you are currently authenticated as.
+kubectl auth can-i get pods # this commands tells Does my current identity have permission to perform get on Pods?
+kubectl auth can-i get deployment -n apache
+kubectl auth can-i get delete deployment -n apache
+kubectl auth can-i get pods --as=apache-user -n apache
+kubectl auth can-i get deployments --as=apache-user -n apache
