@@ -1,0 +1,9 @@
+kind: DevOpsBt
+apiVersion: pn.com/v1
+metadata:
+  name: fighter
+spec:
+  name: DevOps-Z
+  duration: 3months
+  plateform: pn..com
+  mode: live

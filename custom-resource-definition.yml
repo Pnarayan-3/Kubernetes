@@ -1,0 +1,36 @@
+kind: customResourceDefinition
+apiVersion: apiextensions.k8s.io/v1
+metadata:
+  name: devops.learnK8s
+spec:
+  group: learnK8s
+  names:
+    plural: devopsbtes
+    singular: devopsbt
+    kind: DevOpsBT
+    shortName:
+      - pn
+  scoped: Namespaced
+  versions:
+    - name: v1
+      served: true
+      storage: true
+  schema:
+    OpenAPIV3Schema:
+      type: object
+      properties: 
+        spec:
+          type: object
+          properties:
+            name:
+              type: string
+              description: "This is the name of the DevOps bt"
+            duration:
+              type: string
+              description: "This is the duration of DevOps bt"
+            mode:
+              type: string
+              description: "This is the mode of the batch eg Live/Recorded"
+            plateform:
+              type: string
+              description: "This is the plateform of the batch"
