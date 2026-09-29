@@ -61,3 +61,7 @@ kubectl auth can-i get deployments --as=apache-user -n apache
 kubectl -n kubernetes-dashboard create token admin-user # Create an authentication token for the Kubernetes ServiceAccount named admin-user in the kubernetes-dashboard namespace.
 kubectl proxy --address=0.0.0.0 # This starts a local proxy server that forwards requests to the Kubernetes API server.
 kubectl proxy --port=8001 --address=0.0.0.0 --accept-hosts='*' # This is useful in some remote-access/lab setups where you're accessing the proxy through a hostname or IP other than localhost.
+
+# some commands related to istio and docker
+docker image tag <old_img_tag> <new_img_tag> # way to change the tag
+curl -L https://istio.io/downloadIstio | sh -
